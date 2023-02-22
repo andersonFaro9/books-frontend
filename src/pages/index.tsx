@@ -3,46 +3,69 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import {api} from './api/api'
 
-type IBooks = {
+interface IBooks {
   id:string;
   title:string;
+  author:string;
+  year:string;
+  bar_code:string;
   description:string;
 }
 
 export default function Home() {
 
 
-  const [books, setBook] = useState<IBooks[]>([]);
-
-  const getBooks = async () => {
-    try {
-      const myBooks = await api
-        .get('/books')
-        .then((response) => setBook(response.data))
-      console.log(myBooks)
-
-    }catch(err) {
-        console.error(err)
-    }
-  }
-
-  useEffect( () => {
-    getBooks()
-
-  }, [])
-
+  const [books, setBooks] = useState<IBooks[]>([]);
    
+    useEffect ( () =>{
+        getBooks()
+        postBooks()
+    }, [])
+
+     async function postBooks() {
+       try {
+         const myBooks = await api
+           .post('/books')
+           .then((response) => setBooks(response.data))
+         console.log(myBooks)
+
+         
+       } catch (err) {
+         console.error(err)
+       }
+     }
+
+     async function getBooks () {
+     
+        try {
+          const myBooks = await api
+            .get('/books')
+            .then((response) => setBooks(response.data))
+          console.log(myBooks)
+        } catch (err) {
+          console.error(err)
+        }
+     }
+     
   return (
     <>
       <ul>
         {books.map((item) => (
-          <li
-            className=' flex flex-col leading-10'
-            key={item.id}
-          >
+          <li className=' flex flex-col leading-10' key={item.id}>
             <span className=' text-2xl'>
-              {item.title} <br />
+              
+              Titulo: {item.title} <br />
             </span>
+            Autor:
+            {item.author}
+            <br />
+            Bar code:
+            {item.bar_code}
+            <br />
+            Ano:
+            {item.year}
+            <br />
+            Descrição: 
             {item.description}
           </li>
         ))}

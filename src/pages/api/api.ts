@@ -6,5 +6,5 @@ export const api = axios.create({
   
 })
 
-export default api;
+// export default api;
 
