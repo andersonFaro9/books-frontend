@@ -19,22 +19,10 @@ export default function Home() {
    
     useEffect ( () =>{
         getBooks()
-        postBooks()
+      
     }, [])
 
-     async function postBooks() {
-       try {
-         const myBooks = await api
-           .post('/books')
-           .then((response) => setBooks(response.data))
-         console.log(myBooks)
-
-         
-       } catch (err) {
-         console.error(err)
-       }
-     }
-
+ 
      async function getBooks () {
      
         try {
@@ -51,15 +39,15 @@ export default function Home() {
     <>
       <ul>
         {books.map((item) => (
-          <li className=' flex flex-col leading-10' key={item.id}>
-            <span className=' text-2xl'>
-              
-              Titulo: {item.title} <br />
-            </span>
+          <li className='flex  flex-col  leading-10'key={item.id}>
+           
+            Titulo: {item.title} <br/>
+           
             Autor:
             {item.author}
             <br />
             Bar code:
+            
             {item.bar_code}
             <br />
             Ano:
