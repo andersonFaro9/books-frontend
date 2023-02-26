@@ -39,22 +39,24 @@ export default function Home() {
     <>
       <ul>
         {books.map((item) => (
-          <li className='flex  flex-col  leading-10'key={item.id}>
-           
-            Titulo: {item.title} <br/>
-           
-            Autor:
-            {item.author}
-            <br />
-            Bar code:
-            
-            {item.bar_code}
-            <br />
-            Ano:
-            {item.year}
-            <br />
-            Descrição: 
-            {item.description}
+          <li className='flex  flex-col  leading-10' key={item.id}>
+            <p className='text-lg font-bold'>
+              Titulo:
+              <span className='text-base font-normal'>{item.title}</span>
+            </p>
+            <p className='text-lg font-bold'>
+              Autor:
+              <span className='text-base font-normal'>{item.author}</span>
+            </p>
+            <p className='text-lg font-bold'>
+              Bar code:
+              <span className='text-base font-normal'> {item.bar_code} </span>
+            </p>
+            <p className='text-lg font-bold'> Ano:
+            <span className='text-base font-normal'>{item.year}</span></p>
+            <p className='text-lg font-bold'>Descrição:
+            <span className='text-base font-normal'>  {item.description}</span> </p>
+            <br/>
           </li>
         ))}
       </ul>
