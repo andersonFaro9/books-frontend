@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import {api} from './api/api'
 
@@ -38,26 +39,40 @@ export default function Home() {
   return (
     <>
       <ul>
+        {/* criar o click e mostar informações */}
         {books.map((item) => (
-          <li className='flex  flex-col  leading-10' key={item.id}>
-            <p className='text-lg font-bold'>
-              Titulo:
-              <span className='text-base font-normal'>{item.title}</span>
-            </p>
-            <p className='text-lg font-bold'>
-              Autor:
-              <span className='text-base font-normal'>{item.author}</span>
-            </p>
-            <p className='text-lg font-bold'>
-              Bar code:
-              <span className='text-base font-normal'> {item.bar_code} </span>
-            </p>
-            <p className='text-lg font-bold'> Ano:
-            <span className='text-base font-normal'>{item.year}</span></p>
-            <p className='text-lg font-bold'>Descrição:
-            <span className='text-base font-normal'>  {item.description}</span> </p>
-            <br/>
-          </li>
+          <Link href="/[Details].tsx" key= {item.id}>
+            <li className='flex  flex-col  leading-10' key={item.id}>
+              <p className='text-lg font-bold'>
+                Titulo:
+                <span className='text-base font-normal'>{item.title}</span>
+              </p>
+
+              <p className='text-lg font-bold'>
+                Autor:
+                <span className='text-base font-normal'>{item.author}</span>
+              </p>
+              <p className='text-lg font-bold'>
+                Bar code:
+                <span className='text-base font-normal'> {item.bar_code} </span>
+              </p>
+              <p className='text-lg font-bold'>
+                {' '}
+                Ano:
+                <span className='text-base font-normal'>{item.year}</span>
+              </p>
+
+              <p className='text-lg font-bold'>
+                Descrição:
+                <span className='text-base font-normal'>
+                  {' '}
+                  {item.description}
+                </span>{' '}
+              </p>
+
+              <br />
+            </li>
+          </Link>
         ))}
       </ul>
     </>
