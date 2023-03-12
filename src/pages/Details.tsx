@@ -1,52 +1,49 @@
 
 
+import { url } from 'inspector';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'
 
 import {api} from './api/api'
 
-type IDescription ={
-    description:string;
+type IDescription = {
+    
     id:string;
+    title:string;
+    description:string;
+    year:string;
+    author:string;
+    bar_code:string;
 }
 
+type Id = {
+  id:string;
+}
 
 export default function Details () {
     
-    const [details, setDetails] = useState<IDescription[]>([]);
+    const [details, setDetails] = useState<IDescription[]>([])
     
-    const [id] = useState<IDescription[]>([])
-    //  const router = useRouter()
-    //  const { id } = router.query
-     
-
+    
+    
+    const [id] = useState<Id[]>([])
 
     useEffect( ()=>{
         getDetails()
     },[])
     
     async function getDetails () {
-
-      
-      // try {
-      //   const myBooks = await api
-      //     .get(`/books/${details.id}`)
-      //     .then((response) => setDetails(response.data))
-      //     console.log(myBooks)
-      // } catch (err) {
-      //   console.error(err)
-      // }
-
-
+         
       try {
-        const response = await api.get(`books/${id}`, {
+        const response = await api.get(`/books`, {
           params: {
-            
             id,
+            
           },
         })
-
-        setDetails (response.data)
+        setDetails(response.data)
+      
+        
       }
       catch(error) {
         console.log(error)

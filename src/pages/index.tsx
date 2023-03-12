@@ -34,14 +34,15 @@ export default function Home() {
         } catch (err) {
           console.error(err)
         }
-     }
+     } 
+    //  TO DO: COMENTAR O CÓDIGO EXPLICANDO SE FAZ
      
   return (
     <>
       <ul>
-        {/* criar o click e mostar informações */}
+        
         {books.map((item) => (
-          <Link href="/[Details].tsx" key= {item.id}>
+          <Link href={`/details/${item.id}`} key= {item.id}>
             <li className='flex  flex-col  leading-10' key={item.id}>
               <p className='text-lg font-bold'>
                 Titulo:
