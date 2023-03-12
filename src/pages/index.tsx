@@ -40,9 +40,10 @@ export default function Home() {
   return (
     <>
       <ul>
-        
         {books.map((item) => (
-          <Link href={`/details/${item.id}`} key= {item.id}>
+          //Você deve passar o parâmetro da  rota do nestjs
+          //Ficando dessa forma no navegador: http://localhost:3001/05a43ff7-8bcc-4133-afaa-b22ba1ae35c7
+          <Link href={`/details/${item.id}`} key={item.id}>
             <li className='flex  flex-col  leading-10' key={item.id}>
               <p className='text-lg font-bold'>
                 Titulo:
