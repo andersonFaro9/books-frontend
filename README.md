@@ -1,28 +1,17 @@
+
+## Descrição
+
 Este é um aplicativo para estudo, desenvolvido com [Next.js](https://nextjs.org/). que consome da api desenvolvida com Nestjs e tem como objetivo exibir livros de tecnologia. Atráves desse link você consegue verificar o banckend da aplicação (https://github.com/andersonFaro9/books-backend)
 
-## Primeiro
-
-Rodando o servidor:
+## Rodando o app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
 ```
+
+## Como usar
 
 Abra [http://localhost:3000](http://localhost:3000) com seu browser para ver o resultado.
 
-## Doc do Nextjs
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Vercel
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

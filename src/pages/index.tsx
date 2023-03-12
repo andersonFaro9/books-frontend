@@ -35,7 +35,7 @@ export default function Home() {
           console.error(err)
         }
      } 
-    //  TO DO: COMENTAR O CÓDIGO EXPLICANDO SE FAZ
+  
      
   return (
     <>
