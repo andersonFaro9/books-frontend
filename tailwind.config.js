@@ -5,7 +5,12 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Butterfly: ["Butterfly Kids", "kids", "cursive"]
+      },
+      
+    },
   },
   plugins: [],
 }

@@ -1,4 +1,5 @@
-    import { useRouter } from "next/router";
+    import { Header } from "@/components/header";
+import { useRouter } from "next/router";
 
     import { useEffect,useState } from "react";
 
@@ -35,13 +36,20 @@
         }
 
         if (!details) {
-          return <div>carregando...</div>
+          return <div className="flex justify-center font-Butterfly
+        font-extrabold text-6xl text-red-600">Carregando, aguarde...</div>
         }
 
         return (
-            <div>
-                <p>{details.description}</p>
-            </div>
+          <>
+            <Header />
+            <p className='text-lg font-bold'>
+              Descrição:
+              <span className='text-base font-normal'>
+                &nbsp;{details.description}
+              </span>
+            </p>
+          </>
         )
     }
 
