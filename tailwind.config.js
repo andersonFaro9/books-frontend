@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        Montserrat: ["Montserrat", "sans-serif"],
         Butterfly: ["Butterfly Kids", "kids", "cursive"]
       },
       

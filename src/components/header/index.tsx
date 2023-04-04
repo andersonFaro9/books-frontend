@@ -1,5 +1,6 @@
 import { useState } from "react"
 import clsx from "clsx"
+import Link from "next/link"
 
 export function Header () {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,7 +19,7 @@ export function Header () {
       >
         {' '}
         <li className='font-Butterfly'>
-          <a className='flex text-5xl  font-extrabold'>BooksKids</a>
+          <Link href="/" className='flex text-5xl  font-extrabold'>BooksKids</Link>
         </li>
         
           <a href='#' className={menuItemClassName}>
