@@ -43,7 +43,7 @@ import { useRouter } from "next/router";
         return (
           <>
             <Header />
-            <p className='text-lg font-bold'>
+            <p className='text-lg md:flex justify-center mt-24 font-bold'>
               Descrição:
               <span className='text-base font-normal'>
                 &nbsp;{details.description}
