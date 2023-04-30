@@ -62,31 +62,33 @@ export default function Home() {
                 className='bg-yellow-500 rounded-2xl w-80 p-5 leading-8 md:rounded-3xl hover:bg-yellow-400'
                 key={item.id}
               >
-                <p className='text-3xl font-extrabold font-Montserrat'>
+                <p className='text-2xl md:text-3xl font-extrabold font-Montserrat'>
                   Título: &nbsp;
                   <span className='indent-2 text-xl font-black '>
                     {item.title}
                   </span>
                 </p>
 
-                <p className='text-3xl font-bold font-Montserrat'>
+                <p className='text-2xl md:text-3xl font-extrabold font-Montserrat'>
                   Autor: &nbsp;
-                  <span className='text-xl  font-black'>{item.author}</span>
+                  <span className='indent-2 text-xl font-black '>
+                    {item.author}
+                  </span>
                 </p>
-                <p className='text-3xl font-bold font-Montserrat'>
-                  Bar code: &nbsp;
-                  <span className='text-2xl font-black'>{item.bar_code}</span>
-                </p>
-                <p className='text-3xl font-bold font-Montserrat'>
+
+                <p className='text-2xl md:text-3xl font-extrabold font-Montserrat'>
                   Ano: &nbsp;
-                  <span className='text-2xl font-black'>{item.year}</span>
+                  <span className='indent-2 text-xl font-black '>
+                    {item.year}
+                  </span>
                 </p>
+
                 <div className=' flex justify-center '>
                   <button
                     className='flex  font-bold font-Montserrat text-white rounded-lg w-40 pt-2 h-12
-                   text-white-700 text-2xl mt-5 bg-blue-700 md:hover:bg-blue-600 justify-center'
+                   text-white-700 text-base mt-5 bg-blue-700 md:hover:bg-blue-600 justify-center'
                   >
-                    Enviar
+                    Ler mais
                   </button>
                 </div>
               </li>

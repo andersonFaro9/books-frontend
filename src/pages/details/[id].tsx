@@ -43,12 +43,10 @@ import { useRouter } from "next/router";
         return (
           <>
             <Header />
-            <p className='text-lg md:flex justify-center mt-24 font-bold'>
-              Descrição:
-              <span className='text-base font-normal'>
-                &nbsp;{details.description}
-              </span>
-            </p>
+            <p className='mt-10 text-black font-bold text-4xl text-center'>Descrição:</p>
+            <div className='text-lg md:flex justify-center mt-8 font-bold'>
+              <p className='font-normal text-center md:text-3xl'>{details.description}</p>
+            </div>
           </>
         )
     }
